@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.ajoberstar.grgit:grgit-core:4.1.0'
+    }
+}
+
+import org.ajoberstar.grgit.Grgit
+
+ext {
+    git = Grgit.open(currentDir: projectDir)
+    gitCommitHash = git.head().abbreviatedId
+    gitNumberOfCommits = git.log().size()
+    gitTagDescription = git.describe(tags: true)
+    git.close()
+}

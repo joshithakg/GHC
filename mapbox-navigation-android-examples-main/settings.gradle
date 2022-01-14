@@ -1,0 +1,6 @@
+include (
+        ':app',
+        ':android-auto',
+        ':android-auto-app'
+)
+rootProject.name = "Mapbox Navigation Examples"
