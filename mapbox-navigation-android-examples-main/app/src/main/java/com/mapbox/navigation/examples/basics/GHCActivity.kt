@@ -189,9 +189,9 @@ class GHCActivity : AppCompatActivity() {
 
         override fun onNewRawLocation(rawLocation: Location) {
             // not handled
-            println("Lat1: "+rawLocation.latitude)
-            println("Lng1: "+rawLocation.longitude)
-            val urlString = "http://cgworkspace.cytogenie.org/ghc?op=update&latcurr="
+            println("LatNew1: "+rawLocation.latitude)
+            println("LngNew1: "+rawLocation.longitude)
+            val urlString = "http://10.0.2.2:8080/ghc/ghc?op=update&latcurr="
                 .plus(rawLocation.latitude).plus("&lngcurr=").plus(rawLocation.longitude)
                 .plus("&commuteid=").plus(commuteId)
             println(urlString)
@@ -301,7 +301,7 @@ class GHCActivity : AppCompatActivity() {
                         var lt: Double = (hospitals.hospitals?.get(position))?.lat!!;
                         val lg: Double? =hospitals.hospitals?.get(position)?.lng;
                         val dist: Double? =hospitals.hospitals?.get(position)?.distance;
-                        val urlString = "http://cgworkspace.cytogenie.org/ghc?op=new&latstart="
+                        val urlString = "http://10.0.2.2:8080/ghc/ghc?op=new&latstart="
                         .plus(originPoint.latitude()).plus("&lngstart=").plus(originPoint.longitude())
                         .plus("&latend=").plus(lt).plus("&lngend=").plus(lg)
                         .plus("&dest=").plus(selectedItem)
@@ -550,7 +550,7 @@ class GHCActivity : AppCompatActivity() {
                         .withCircleStrokeWidth(2.0)
                         .withCircleStrokeColor("#ffffff")
                     circleAnnotationManager.create(circleAnnotionOptions)
-                    val urlString = "http://cgworkspace.cytogenie.org/ghc?op=alert&lat="
+                    val urlString = "http://10.0.2.2:8080/ghc/ghc?op=alert&lat="
                         .plus(point.latitude()).plus("&lng=").plus(point.longitude());
                     runAlert(urlString, builder, point);
                 }
@@ -595,7 +595,8 @@ class GHCActivity : AppCompatActivity() {
                 listOf(
                     ReplayRouteMapper.mapToUpdateLocation(
                         eventTimestamp = 0.0,
-                        point = Point.fromLngLat(77.7247, 12.9672)
+                        //point = Point.fromLngLat(77.7247, 12.9672)
+                        point = Point.fromLngLat(-79.347015, 43.651070)
                     )
                 )
             )
@@ -621,7 +622,7 @@ class GHCActivity : AppCompatActivity() {
         routeLineView.cancel()
     }
     private fun showNearByHospitals(originPoint: Point, builder: AlertDialog.Builder ) {
-        val urlString = "http://cgworkspace.cytogenie.org/ghc?op=hosp&lat="
+        val urlString = "http://10.0.2.2:8080/ghc/ghc?op=hosp&lat="
             .plus(originPoint.latitude()).plus("&lng=").plus(originPoint.longitude());
         //this.runOnUiThread(java.lang.Runnable { })
         run(urlString, builder, originPoint);

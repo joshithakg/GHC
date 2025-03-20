@@ -3,4 +3,9 @@ include (
         ':android-auto',
         ':android-auto-app'
 )
+dependencyResolutionManagement{
+    repositories{
+        maven { url "https://jitpack.io" }
+    }
+}
 rootProject.name = "Mapbox Navigation Examples"

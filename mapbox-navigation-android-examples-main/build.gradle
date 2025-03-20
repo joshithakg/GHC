@@ -10,7 +10,8 @@ buildscript {
             }
             credentials {
                 username = "mapbox"
-                password = project.hasProperty('MAPBOX_DOWNLOADS_TOKEN') ? project.property('MAPBOX_DOWNLOADS_TOKEN') : System.getenv('MAPBOX_DOWNLOADS_TOKEN')
+                //password = project.hasProperty('MAPBOX_DOWNLOADS_TOKEN') ? project.property('MAPBOX_DOWNLOADS_TOKEN') : System.getenv('MAPBOX_DOWNLOADS_TOKEN')
+                password = "sk.eyJ1IjoiZ292YXJ0aGFuIiwiYSI6ImNrd2V2dTVycDA4cm0yd21qYWs3MjB6azAifQ.XiNMXUevF9Nk4NWG-z3QGA"
             }
         }
     }
@@ -33,7 +34,7 @@ allprojects {
             }
             credentials {
                 username = "mapbox"
-                password = project.hasProperty('MAPBOX_DOWNLOADS_TOKEN') ? project.property('MAPBOX_DOWNLOADS_TOKEN') : System.getenv('MAPBOX_DOWNLOADS_TOKEN')
+                password = "sk.eyJ1IjoiZ292YXJ0aGFuIiwiYSI6ImNrd2V2dTVycDA4cm0yd21qYWs3MjB6azAifQ.XiNMXUevF9Nk4NWG-z3QGA"
             }
         }
     }
