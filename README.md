@@ -1,15 +1,15 @@
-#GOLDEN HOUR COMMUTE
+# GOLDEN HOUR COMMUTE
 
-##OBJECTIVE
+## OBJECTIVE
 
 Develop a solution that is cost effective, easy to implement, immediately put to use, use maximum possible ways to save a life in golden hour (who are in the critical time limit to save their lives by taking them to a hospital) by removing all the traffic obstacles on their commutation to the hospital.
 
-##PROBLEM STATEMENT
+## PROBLEM STATEMENT
 We cannot always predict our commutation time in the metropolitan cities, during peak hours it can become even worse. There are also other obstacles such as bad roads, rains, unusual wait time in signals, traffic jams that can increase the commutation time multifold.
 
 Time is critical in an emergency situation especially in the golden hour, it is important to reach the hospital early to save a life.  Person who had a heart attack at home or office, someone critically injured in a roadside accident will fall under the golden hour time. Traffic delays to reach the hospital is the major issue during those situations.  
 
-##SOLUTION
+## SOLUTION
 
 The solution to address multiple causes for traffic delays are below :
 
@@ -25,11 +25,11 @@ Co-Commuters: Generally the co-commuters get to know the emergency only when the
 Our application can send a custom notification in advance to all of the active commuters on their path. By seeing this notification in advance, the other commuters can comfortably give way to the patients. 
 Note: The co-commuters must have our app and provide access to their current location. 
 
-##USERS:
+## USERS:
 
 This solution is driven by responsible citizens, by government staffs, hospitals and many more. Anyone who would like to make a little contribution to save a life can help do this easily. All they have to do is to install our application on their phone and enable access to their location services, they can turn on the location service probably only when they are commuting. Traffic police constables can be requested by the Government to use the app mandatorily. The school buses or the taxi services can also ask their drivers to use our app. 
 
-##SCENARIO:
+## SCENARIO:
 
 Let us assume, there is an accident on the road and an ambulance arrives. The driver of that ambulance has our app and initiates the golden hour commutation on our App by choosing the source (current) location and target (the hospital).
 
@@ -47,7 +47,7 @@ Thus the ambulance can reach the hospital earlier and save the life.
 
 Hospital staff can also plan appropriately as per the arrival and be ready with the doctors and other resources.
 
-##MAJOR FUNCTIONALITIES
+## MAJOR FUNCTIONALITIES
 Continuously identifying active users on the route and sending them a periodic notification -
 Using location services, App can determine the current location of every active user and when a commutation is planned it will find the users on that route accordingly.  
 The challenge may be to find the direction user is commuting as we do not have to alert users coming in the opposite direction 
