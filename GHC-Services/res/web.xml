@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Welcome to AutoGate</display-name>
+  <description>
+     Welcome to AutoGate
+  </description>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>help</servlet-name>
+    <url-pattern>/help</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>helptest</servlet-name>
+    <url-pattern>/helptest</url-pattern>
+  </servlet-mapping>
+   
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/versions</url-pattern>
+  </servlet-mapping>
+    
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Register</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/register2</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/registerserver</url-pattern>
+  </servlet-mapping>
+
+ <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getserver</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/updatepass</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/logusage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getUserPass</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getChallengeQues</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/checkPass</url-pattern>
+  </servlet-mapping>
+    
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/downloadDetails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/download</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Verify</url-pattern>
+  </servlet-mapping>  
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Grace</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Expiry</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/History</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Report</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/checkExpUpdate</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getAllExps</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getNextExpId</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getLatestVersion</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getRemoteDetails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/getRemoteOnlyExperiments</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/purgeExperiment</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AGS</servlet-name>
+    <url-pattern>/AGS/Download</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ghc</servlet-name>
+    <url-pattern>/ghc</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AGS</servlet-name>
+    <servlet-class>com.ScienceXperts.skg.autogateuseradmin.AutoGateServlet</servlet-class>
+	<init-param>
+		<description>JDBC driver for debugging</description>
+		<param-name>jdbcDriver</param-name>
+		<!--<param-value>com.mysql.jdbc.Driver</param-value>-->
+		<param-value>org.mariadb.jdbc.Driver</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC URL for debugging</description>
+		<param-name>jdbcURL</param-name>
+		<!--<param-value>jdbc:mysql://localhost:3306/sciencexperts</param-value>-->
+		<param-value>jdbc:mariadb://localhost:3306/sciencexperts</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC username for debugging</description>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC userpass for debugging</description>
+		<param-name>jdbcUserpass</param-name>
+		<param-value>s6,SciCyto0729</param-value>
+	</init-param>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>help</servlet-name>
+    <servlet-class>com.autohelp.servlet.HelpServlet</servlet-class>
+	<init-param>
+		<description>JDBC driver for debugging</description>
+		<param-name>jdbcDriver</param-name>
+		<!--<param-value>com.mysql.jdbc.Driver</param-value>-->
+		<param-value>org.mariadb.jdbc.Driver</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC URL for debugging</description>
+		<param-name>jdbcURL</param-name>
+		<!--<param-value>jdbc:mysql://localhost:3306/help</param-value>-->
+		<param-value>jdbc:mariadb://localhost:3306/help</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC username for debugging</description>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC userpass for debugging</description>
+		<param-name>jdbcUserpass</param-name>
+		<param-value>s6,SciCyto0729</param-value>
+	</init-param>
+  </servlet>
+
+  <servlet>
+    <servlet-name>helptest</servlet-name>
+    <servlet-class>com.autohelp.servlet.HelpServlet</servlet-class>
+	<init-param>
+		<description>JDBC driver for debugging</description>
+		<param-name>jdbcDriver</param-name>
+		<!--<param-value>com.mysql.jdbc.Driver</param-value>-->
+		<param-value>org.mariadb.jdbc.Driver</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC URL for debugging</description>
+		<param-name>jdbcURL</param-name>
+		<!--<param-value>jdbc:mysql://localhost:3306/helptest</param-value>-->
+		<param-value>jdbc:mariadb://localhost:3306/helptest</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC username for debugging</description>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC userpass for debugging</description>
+		<param-name>jdbcUserpass</param-name>
+		<param-value>s6,SciCyto0729</param-value>
+	</init-param>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>ghc</servlet-name>
+    <servlet-class>com.ghc.servlet.GHCServlet</servlet-class>
+	<init-param>
+		<description>JDBC driver for debugging</description>
+		<param-name>jdbcDriver</param-name>
+		<param-value>org.mariadb.jdbc.Driver</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC URL for debugging</description>
+		<param-name>jdbcURL</param-name>
+		<param-value>jdbc:mariadb://localhost:3306/ghc</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC username for debugging</description>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</init-param>
+	<init-param>
+		<description>JDBC userpass for debugging</description>
+		<param-name>jdbcUserpass</param-name>
+		<param-value>s6,SciCyto0729</param-value>
+	</init-param>
+  </servlet>
+
+</web-app>
